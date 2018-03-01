@@ -2,13 +2,10 @@
   "name": "alga-async-process",
   "version": "1.0.0",
   "description": "Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO approach",
-  "main": "./dist/AlgaAsyncProcess.js",
-  "directories": {
-    "test": "mocha ./test/**/* --compilers js:babel-core/register",
-    "build": "test"
-  },
+  "main": "./AlgaAsyncProcess.js",
   "scripts": {
-    "test": "mocha ./test/**/* --compilers js:babel-core/register"
+    "test": "mocha ./test/**/* --compilers js:babel-core/register",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -25,5 +22,17 @@
   "bugs": {
     "url": "https://github.com/4lg4/AlgaAsyncProcess/issues"
   },
-  "homepage": "https://github.com/4lg4/AlgaAsyncProcess#readme"
+  "homepage": "https://github.com/4lg4/AlgaAsyncProcess#readme",
+  "devDependencies": {
+    "babel-loader": "^7.1.3",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "eslint-config-google": "^0.9.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9"
+  }
 }

@@ -3,20 +3,20 @@
  */
 
 const AlgaAsyncProcess = async (promise) => {
-    try {
-        return [null, await promise];
-    } catch (err) {
-        return [err];
-    }
+  try {
+    return [null, await promise];
+  } catch (err) {
+    return [err];
+  }
 };
 
 export default AlgaAsyncProcess;
 
 module.exports.reject = (messsage)=> {
-    return Promise.reject(messsage);
+  return Promise.reject(messsage);
 };
 
 module.exports.resolve = (data)=> {
-    return Promise.resolve(data);
+  return Promise.resolve(data);
 };
 

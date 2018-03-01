@@ -4,7 +4,7 @@ Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO a
 
 ### Get Started
 ```bash
-    npm i --save 
+    npm i --save [missing to publish it]
 ```
 
 ### Example
@@ -25,3 +25,30 @@ Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO a
         return result;
     })();
 ```
+
+
+
+<br><br>
+## Build it yourself 
+#### Development
+````bash
+    npm install
+````
+
+#### Production
+````bash
+    npm run build
+````
+
+#### Test
+````bash
+    npm run test
+````
+
+## Author
+Alga Leal (4lg4) 
+
+- [http://alga.me](http://alga.me)
+- [https://www.linkedin.com/in/akgleal](https://www.linkedin.com/in/akgleal)
+- [https://github.com/4lg4](https://github.com/4lg4)
+
