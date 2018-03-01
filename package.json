@@ -1,0 +1,29 @@
+{
+  "name": "alga-async-process",
+  "version": "1.0.0",
+  "description": "Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO approach",
+  "main": "./dist/AlgaAsyncProcess.js",
+  "directories": {
+    "test": "mocha ./test/**/* --compilers js:babel-core/register",
+    "build": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test/**/* --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4lg4/AlgaAsyncProcess.git"
+  },
+  "keywords": [
+    "async",
+    "process",
+    "go",
+    "style"
+  ],
+  "author": "Alga.me",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/4lg4/AlgaAsyncProcess/issues"
+  },
+  "homepage": "https://github.com/4lg4/AlgaAsyncProcess#readme"
+}

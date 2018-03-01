@@ -1,19 +1,27 @@
 # AlgaAsyncProcess
 Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO approach
 
-### Getting Started
+
+### Get Started
+```bash
+    npm i --save 
+```
+
+### Example
 ```javascript
-    import aap from './AlgaAsyncProcess'
+    import aap, {resolve, reject} from 'AlgaAsyncProcess';
+
+    (async()=>{
+        const [err,result] = await aap(__MyPromise__);
     
-    const [err,result] = await aap(__MyPromise__);
-
-    if(err) { 
-    return err; 
-    }
-
-    if(!result) { 
-    return 'Nothing found' 
-    }
-
-    return result;
+        if(err) { 
+            return reject(err); 
+        }
+    
+        if(!result) { 
+            return reject('no results'); 
+        }
+    
+        return result;
+    })();
 ```
