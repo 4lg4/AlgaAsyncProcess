@@ -7,7 +7,7 @@ const babel = require('gulp-babel');
 
 gulp.task('default', [
   'compile',
-  // 'copy'
+  'copy'
 ]);
 
 gulp.task('compile', function(cb) {
@@ -20,9 +20,9 @@ gulp.task('compile', function(cb) {
   cb();
 });
 
-// gulp.task('copy', function(cb) {
-//   gulp.src(['./package.json','./src/env.json'])
-//     .pipe(gulp.dest('./dist/'));
-//
-//   cb();
-// });
+gulp.task('copy', function(cb) {
+  gulp.src(['./package.json'])
+    .pipe(gulp.dest('./dist/'));
+
+  cb();
+});

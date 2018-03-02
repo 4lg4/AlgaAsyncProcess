@@ -5,7 +5,8 @@
   "main": "./AlgaAsyncProcess.js",
   "scripts": {
     "test": "mocha ./test/**/* --compilers js:babel-core/register",
-    "build": "gulp"
+    "build": "gulp",
+    "_publish": "npm run build && npm version patch && cd ./dist/ && npm publish"
   },
   "repository": {
     "type": "git",
