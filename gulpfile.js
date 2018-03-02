@@ -7,7 +7,7 @@ const babel = require('gulp-babel');
 
 gulp.task('default', [
   'compile',
-  'copy'
+  // 'copy'
 ]);
 
 gulp.task('compile', function(cb) {
