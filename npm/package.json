@@ -3,6 +3,9 @@
   "version": "1.0.3",
   "description": "Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO approach",
   "main": "index.js",
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/4lg4/AlgaAsyncProcess.git"
