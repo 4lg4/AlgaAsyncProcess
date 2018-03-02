@@ -3,8 +3,8 @@
  */
 
 import assert from 'assert';
-import AlgaAsyncProcess, {resolve, reject} from '../dist/index';
-// import AlgaAsyncProcess, {resolve, reject} from '../src/AlgaAsyncProcess';
+// import AlgaAsyncProcess, {resolve, reject} from '../dist/index';
+import AlgaAsyncProcess, {resolve, reject} from '../src/index';
 
 describe(`AlgaAsyncProcess https://github.com/4lg4/AlgaAsyncProcess`, ()=> {
 
