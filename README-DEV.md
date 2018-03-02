@@ -26,6 +26,25 @@ Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO a
     })();
 ```
 
+
+
+<br><br>
+## Build it yourself 
+#### Development
+````bash
+    npm install
+````
+
+#### Production
+````bash
+    npm run build
+````
+
+#### Test
+````bash
+    npm run test
+````
+
 ## Author
 Alga Leal (4lg4) 
 

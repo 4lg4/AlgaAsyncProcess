@@ -21,7 +21,7 @@ gulp.task('compile', function(cb) {
 });
 
 gulp.task('copy', function(cb) {
-  gulp.src(['./package.json'])
+  gulp.src(['./package.json', './README.md'])
     .pipe(gulp.dest('./dist/'));
 
   cb();
