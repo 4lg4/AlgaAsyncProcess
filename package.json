@@ -1,12 +1,12 @@
 {
   "name": "alga-async-process",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO approach",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/**/* --compilers js:babel-core/register",
     "build": "gulp",
-    "_publish": "npm run build && npm version patch && cd ./dist/ && npm publish"
+    "_publish": "npm run build && cd ./npm/ && npm version patch && gulp copy && cd ../dist/ && npm publish"
   },
   "repository": {
     "type": "git",

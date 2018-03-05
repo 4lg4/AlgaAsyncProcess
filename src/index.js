@@ -4,7 +4,13 @@
 
 const AlgaAsyncProcess = async (promise) => {
   try {
-    return [null, await promise];
+    let result = await promise;
+
+    if (result instanceof Array) {
+      result.unshift(null);
+      return result;
+    }
+    return [null, result];
   } catch (err) {
     return [err];
   }
