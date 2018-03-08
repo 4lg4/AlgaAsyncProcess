@@ -21,6 +21,12 @@ describe(`AlgaAsyncProcess https://github.com/4lg4/AlgaAsyncProcess`, ()=> {
       assert.equal(err, expected);
     });
 
+    it(`should return an array of objects`, async () => {
+      const expected = [{id: 1},{id: 2},{id: 3},{id: 4}];
+      const [err, success] = await AlgaAsyncProcess(Promise.resolve(expected), true);
+      assert.equal(success, expected);
+    });
+
     it(`should return an array resulted from the promise all`, async () => {
       const expected = ['RIGHT', 'RIGHT2', 'RIGHT3'];
       const [err, a, b, c] = await AlgaAsyncProcess(Promise.all([

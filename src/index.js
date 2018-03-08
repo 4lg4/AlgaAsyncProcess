@@ -2,11 +2,12 @@
  * Created by www.Alga.me on 27/2/18.
  */
 
-const AlgaAsyncProcess = async (promise) => {
+const AlgaAsyncProcess = async (promise,fullReturn) => {
   try {
     let result = await promise;
 
-    if (result instanceof Array) {
+    // TODO: find a way to itentify if the Promise is an array
+    if (!fullReturn && result instanceof Array) {
       result.unshift(null);
       return result;
     }
