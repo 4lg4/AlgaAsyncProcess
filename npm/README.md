@@ -4,7 +4,7 @@ Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO a
 
 ### Get Started
 ```bash
-    npm i --save alga-async-process
+    npm i --save npm i alga-async-process
 ```
 
 ### Example
@@ -12,7 +12,7 @@ Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO a
     import aap, {resolve, reject} from 'AlgaAsyncProcess';
 
     (async()=>{
-        const [err,result] = await aap(__MyPromise__);
+        const [err, result] = await aap(__MyPromise__);
     
         if(err) { 
             return reject(err); 
@@ -24,6 +24,28 @@ Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO a
     
         return result;
     })();
+```
+
+### IMPORTANT
+##### NO fullReturn option
+```javascript
+  const [err, one, two, three] = await aap(
+    Promise.resolve([1,2,3])
+  );
+  
+  const [err, a, b] = await aap(
+    Promise.all([
+      __MyPromise__,
+      __MyPromise__
+    ])
+  );
+```
+##### fullReturn option
+```javascript
+  const [err, entireArray] = await aap(
+    Promise.resolve([1,2,3]),
+    true
+  );
 ```
 
 ## Author
