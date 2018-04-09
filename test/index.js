@@ -32,7 +32,7 @@ describe(`AlgaAsyncProcess https://github.com/4lg4/AlgaAsyncProcess`, ()=> {
       const [err, a, b, c] = await AlgaAsyncProcess(Promise.all([
         Promise.resolve(expected[0]),
         Promise.resolve(expected[1]),
-        Promise.resolve(expected[2])
+        Promise.resolve(expected[2]),
       ]), true);
       const result = [a, b, c];
       assert.deepEqual(result, expected);
