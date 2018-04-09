@@ -27,24 +27,29 @@ Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO a
 ```
 
 ### IMPORTANT
+##### fullReturn option
+by default the returning array will be in one variable
+```javascript
+  const [err, entireArray] = await aap(
+    Promise.resolve([1,2,3])
+  );
+```
+
 ##### NO fullReturn option
 ```javascript
   const [err, one, two, three] = await aap(
-    Promise.resolve([1,2,3])
+    Promise.resolve([1,2,3]),
+    
+    true // true
   );
   
   const [err, a, b] = await aap(
     Promise.all([
       __MyPromise__,
       __MyPromise__
-    ])
-  );
-```
-##### fullReturn option
-```javascript
-  const [err, entireArray] = await aap(
-    Promise.resolve([1,2,3]),
-    true
+    ]),
+    
+    true // true
   );
 ```
 
@@ -68,7 +73,7 @@ Node.js: async process, a way to avoid huge try {} catch blocks in JS using GO a
 ## Author
 Alga Leal (4lg4) 
 
-- [http://alga.me](http://alga.me)
+- [http://alga.me](http://www.alga.me)
 - [https://www.linkedin.com/in/akgleal](https://www.linkedin.com/in/akgleal)
 - [https://github.com/4lg4](https://github.com/4lg4)
 
