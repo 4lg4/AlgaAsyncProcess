@@ -2,7 +2,7 @@
  * Created by www.Alga.me on 27/2/18.
  */
 
-const AlgaAsyncProcess = async (promise,fullReturn) => {
+const AlgaAsyncProcess = async (promise, fullReturn) => {
   try {
     let result = await promise;
 

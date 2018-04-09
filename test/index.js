@@ -23,7 +23,7 @@ describe(`AlgaAsyncProcess https://github.com/4lg4/AlgaAsyncProcess`, ()=> {
 
     it(`should return an array of objects`, async () => {
       const expected = [{id: 1},{id: 2},{id: 3},{id: 4}];
-      const [err, success] = await AlgaAsyncProcess(Promise.resolve(expected), true);
+      const [err, success] = await AlgaAsyncProcess(Promise.resolve(expected));
       assert.equal(success, expected);
     });
 
@@ -33,7 +33,7 @@ describe(`AlgaAsyncProcess https://github.com/4lg4/AlgaAsyncProcess`, ()=> {
         Promise.resolve(expected[0]),
         Promise.resolve(expected[1]),
         Promise.resolve(expected[2])
-      ]));
+      ]), true);
       const result = [a, b, c];
       assert.deepEqual(result, expected);
     });
